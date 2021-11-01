@@ -46,15 +46,15 @@ public class User {
 //
     @Column(name = "email_verification_ind", columnDefinition = "integer default '0'")
     private int emailVerificationInd;
-//
-//    @Column(name = "bvn_verification_ind", columnDefinition = "integer default '0'")
-//    private int bvnVerificationInd;
+
+    @Column(name = "bvn_verification_ind", columnDefinition = "integer default '0'")
+    private int bvnVerificationInd;
 //
 //    @Column(name = "date_registered")
 //    private Timestamp dateRegistered = Timestamp.from(Instant.now());
 //
 //
-//    @Transient private Long bvn;
+    @Transient private Long bvn;
 //
     @Transient private String token;
 

@@ -23,6 +23,7 @@ public class UserController {
     @RequestMapping(value = "/createUser", method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response> createNewUser(@RequestBody User user) {
+    	System.out.println(user.getBvn());
     	Response response = userService.createUser(user.getFirstName(), user.getLastName(), user.getEmailAddress(), user.getPhoneNumber(),
                 user.getPassword(), user.getUsername());
     	HttpStatus httpStatus = response.getResponseCode().equals("00")?HttpStatus.OK:HttpStatus.BAD_REQUEST;
